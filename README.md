@@ -1,7 +1,3 @@
-# Gip Workout Tracker Landing Page
-
-A landing page for the Hevy workout tracker app.
-
 ## Setup
 
 1. Install dependencies:
