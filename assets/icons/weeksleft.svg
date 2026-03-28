@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="230" fill="#F5A020"/>
+  <!-- Grid lines (subtle) -->
+  <line x1="341" y1="0" x2="341" y2="1024" stroke="rgba(255,180,40,0.3)" stroke-width="2"/>
+  <line x1="682" y1="0" x2="682" y2="1024" stroke="rgba(255,180,40,0.3)" stroke-width="2"/>
+  <line x1="0" y1="341" x2="1024" y2="341" stroke="rgba(255,180,40,0.3)" stroke-width="2"/>
+  <line x1="0" y1="682" x2="1024" y2="682" stroke="rgba(255,180,40,0.3)" stroke-width="2"/>
+
+  <!-- Hourglass outer glow -->
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="18" result="coloredBlur"/>
+    <feMerge>
+      <feMergeNode in="coloredBlur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Hourglass body (outer rim) -->
+  <g filter="url(#glow)">
+    <!-- Top trapezoid -->
+    <path d="M280 200 Q280 155 320 155 L704 155 Q744 155 744 200 L744 240 Q744 270 700 310 L560 440 Q536 460 512 470 Q488 460 464 440 L324 310 Q280 270 280 240 Z"
+          fill="rgba(245,175,50,0.85)" stroke="rgba(255,230,100,0.7)" stroke-width="6"/>
+    <!-- Top inner highlight -->
+    <path d="M330 175 Q330 165 345 165 L679 165 Q694 165 694 175 L694 230 Q694 255 658 290 L538 405 Q525 415 512 420 Q499 415 486 405 L366 290 Q330 255 330 230 Z"
+          fill="rgba(255,215,70,0.75)"/>
+    <!-- Top center bright -->
+    <ellipse cx="512" cy="295" rx="80" ry="50" fill="rgba(255,240,130,0.4)"/>
+
+    <!-- Neck/pinch -->
+    <ellipse cx="512" cy="512" rx="45" ry="30" fill="rgba(245,175,50,0.9)" stroke="rgba(255,230,100,0.6)" stroke-width="4"/>
+    <ellipse cx="512" cy="512" rx="25" ry="16" fill="rgba(255,230,90,0.8)"/>
+
+    <!-- Bottom trapezoid (inverted) -->
+    <path d="M280 824 Q280 869 320 869 L704 869 Q744 869 744 824 L744 784 Q744 754 700 714 L560 584 Q536 564 512 554 Q488 564 464 584 L324 714 Q280 754 280 784 Z"
+          fill="rgba(245,175,50,0.75)" stroke="rgba(255,230,100,0.6)" stroke-width="6"/>
+    <!-- Bottom inner -->
+    <path d="M330 849 Q330 859 345 859 L679 859 Q694 859 694 849 L694 794 Q694 769 658 734 L538 619 Q525 609 512 604 Q499 609 486 619 L366 734 Q330 769 330 794 Z"
+          fill="rgba(255,200,60,0.5)"/>
+  </g>
+</svg>

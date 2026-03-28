@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gipfel - Log Workouts, Get Stronger, Stay Motivated</title>
+    <title>WeeksLeft - Your Life, Visualized in Weeks</title>
     <link rel="stylesheet" href="css/footer.css">
     <style>
         * {
@@ -13,7 +13,7 @@
         }
 
         html, body {
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
             height: 100%;
         }
 
@@ -60,6 +60,7 @@
         .logo-svg {
             width: 36px;
             height: 36px;
+            border-radius: 8px;
         }
 
         .btn {
@@ -74,26 +75,26 @@
 
         .btn-login {
             background: transparent;
-            color: #2563eb;
+            color: #F5A020;
         }
 
         .btn-signup {
-            background: #2563eb;
+            background: #F5A020;
             color: white;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 15px rgba(245, 160, 32, 0.3);
         }
 
         .btn-signup:hover {
-            background: #1d4ed8;
+            background: #E08E10;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 6px 20px rgba(245, 160, 32, 0.4);
         }
 
         /* Hero Section */
         .hero {
             display: flex;
             align-items: center;
-            height: calc(100vh - 200px); /* Adjusted height to account for taller footer */
+            height: calc(100vh - 200px);
             padding: 7rem 5% 2rem;
             gap: 3rem;
             overflow: hidden;
@@ -109,7 +110,7 @@
                 display: block !important;
                 padding-bottom: 20rem !important;
             }
-            
+
             .hero-content {
                 display: block !important;
                 width: 100% !important;
@@ -117,7 +118,7 @@
                 text-align: center !important;
                 margin-bottom: 4rem !important;
             }
-            
+
             .phones-container {
                 position: relative !important;
                 display: block !important;
@@ -129,7 +130,7 @@
                 padding: 2rem 0 !important;
                 text-align: center !important;
             }
-            
+
             .phone {
                 display: block !important;
                 position: relative !important;
@@ -154,7 +155,7 @@
         }
 
         .hero h1 .highlight {
-            color: #777777;
+            color: #F5A020;
             position: relative;
             display: inline-block;
         }
@@ -166,7 +167,7 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background: linear-gradient(90deg, rgba(177, 177, 183, 0.3) 0%, rgba(177, 177, 183, 0.7) 100%);
+            background: linear-gradient(90deg, rgba(245, 160, 32, 0.2) 0%, rgba(245, 160, 32, 0.5) 100%);
             border-radius: 4px;
             z-index: -1;
             transform: translateY(5px);
@@ -192,7 +193,7 @@
             display: flex;
             align-items: center;
             padding: 1.25rem 2rem;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #F5A020 0%, #E08E10 100%);
             color: white;
             text-decoration: none;
             border-radius: 14px;
@@ -200,7 +201,7 @@
             font-weight: 700;
             letter-spacing: 0.02em;
             font-size: 1.1rem;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 25px rgba(245, 160, 32, 0.4);
             position: relative;
             overflow: hidden;
         }
@@ -219,7 +220,7 @@
 
         .download-btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
+            box-shadow: 0 15px 30px rgba(245, 160, 32, 0.5);
         }
 
         .download-btn:hover::before {
@@ -252,7 +253,7 @@
         }
 
         .stars {
-            color: #fbbf24;
+            color: #F5A020;
             font-size: 1.2rem;
         }
 
@@ -268,9 +269,9 @@
             justify-content: center;
             align-items: center;
             gap: 24px;
-            max-height: calc(100vh - 200px); /* Reduced to give more space */
+            max-height: calc(100vh - 200px);
             overflow: visible;
-            z-index: 200; /* Higher than footer */
+            z-index: 200;
         }
 
         .phone {
@@ -282,7 +283,7 @@
             transition: all 0.6s ease;
             cursor: pointer;
             position: relative;
-            z-index: 200; /* Higher than footer */
+            z-index: 200;
         }
 
         .phone-label {
@@ -313,7 +314,7 @@
 
         .phone-2 {
             position: relative;
-            z-index: 200; /* Same as other phones, higher than footer */
+            z-index: 200;
         }
 
         .hero-content::before {
@@ -323,7 +324,7 @@
             left: -100px;
             width: 200px;
             height: 200px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 70%);
+            background: radial-gradient(circle, rgba(245, 160, 32, 0.1) 0%, rgba(245, 160, 32, 0) 70%);
             border-radius: 50%;
             z-index: -1;
             pointer-events: none;
@@ -332,7 +333,7 @@
         .phone-screen {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #F5A020 0%, #E08E10 100%);
             border-radius: 32px;
             position: relative;
             overflow: hidden;
@@ -354,64 +355,12 @@
             margin-bottom: 2rem;
         }
 
-        .workout-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .workout-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .workout-stats {
-            display: flex;
-            justify-content: space-around;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-
-        .exercise-list {
-            flex: 1;
-        }
-
-        .exercise {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 0.8rem;
-        }
-
-        .exercise-name {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Animations removed */
-
-        /* Footer - Made taller */
+        /* Footer */
         .footer {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             color: #B1B1B7;
-            padding: 2.5rem 5%; /* Increased from 0.5rem to 2.5rem */
+            padding: 2.5rem 5%;
             text-align: center;
             position: fixed;
             bottom: 0;
@@ -445,7 +394,7 @@
         }
 
         .footer-links a:hover {
-            color: #2563eb;
+            color: #F5A020;
         }
 
         /* Responsive */
@@ -641,9 +590,9 @@
 <nav class="navbar">
     <div class="logo">
         <div class="logo-icon">
-            <img src="assets/icons/finder.svg" alt="Gipfel Logo" class="logo-svg">
+            <img src="assets/icons/GridMark-iOS-Dark1024x1024@1x.png" alt="WeeksLeft Logo" class="logo-svg">
         </div>
-        Gipfel: Workout Planner
+        WeeksLeft
     </div>
 </nav>
 
@@ -651,11 +600,10 @@
 <section class="hero">
     <div class="hero-content">
         <h1>
-            Log Workouts<br>
-            <span class="highlight">Reach New Heights</span><br>
-            Get Stronger
+            Your Life<br>
+            <span class="highlight">Visualized in Weeks</span>
         </h1>
-        <p>Gipfel is a free workout tracker for iOS. Build routines and track progress.</p>
+        <p>Every dot is one week. See how many you've lived, how many remain, and what you're spending them on.</p>
 
         <div class="download-buttons">
             <a href="#" class="app-store-btn">
@@ -666,18 +614,18 @@
 
     <div class="phones-container">
         <div class="phone phone-1" onclick="highlightPhone(1)" style="background: none; padding: 0;">
-            <div class="phone-label">Plan Workouts</div>
-            <img src="assets/images/PlanWorkout.png" alt="Plan Workout Screen" style="width: 100%; height: 100%; object-fit: contain; border-radius: 40px;">
+            <div class="phone-label">Life Grid</div>
+            <img src="assets/images/PlanWorkout.png" alt="Life Grid Screen" style="width: 100%; height: 100%; object-fit: contain; border-radius: 40px;">
         </div>
 
         <div class="phone phone-2" onclick="highlightPhone(2)" style="background: none; padding: 0;">
-            <div class="phone-label">Log Workouts</div>
-            <img src="assets/images/LogWorkout.png" alt="Log Workout Screen" style="width: 100%; height: 100%; object-fit: contain; border-radius: 40px;">
+            <div class="phone-label">Custom Trackers</div>
+            <img src="assets/images/LogWorkout.png" alt="Custom Trackers Screen" style="width: 100%; height: 100%; object-fit: contain; border-radius: 40px;">
         </div>
 
         <div class="phone phone-3" onclick="highlightPhone(3)" style="background: none; padding: 0;">
-            <div class="phone-label">Track Progress</div>
-            <img src="assets/images/Track.png" alt="Track Progress Screen" style="width: 100%; height: 100%; object-fit: contain; border-radius: 40px;">
+            <div class="phone-label">Widgets</div>
+            <img src="assets/images/Track.png" alt="Widgets Screen" style="width: 100%; height: 100%; object-fit: contain; border-radius: 40px;">
         </div>
     </div>
 </section>
@@ -687,10 +635,10 @@
     <div class="footer-links">
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms-and-conditions">Terms & Conditions</a>
-        <a href="mailto:alvin_askoolum@icloud.com?subject=Gipfel Support">Contact/Support</a>
+        <a href="mailto:alvin_askoolum@icloud.com?subject=WeeksLeft Support">Contact/Support</a>
     </div>
     <div>
-        © 2026 Gipfel. All rights reserved.
+        © 2026 WeeksLeft. All rights reserved.
     </div>
 </footer>
 
@@ -714,7 +662,6 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            // Navigation clicks don't trigger scrolling on PC
         });
     });
 
@@ -753,8 +700,6 @@
             }, 600 + (index * 200));
         });
     });
-
-    // Interactive phone rotation removed
 </script>
 </body>
 </html>
